@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueZ</title>
+    <link href="../semantic/semantic.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .item{
+            font-size: 20px;
+            color: #2bbbff;
+        }
+        #ui{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #segmen{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2 class="ui header" id="ui">
+        <i class="settings icon"></i>
+        <div class="content">Vue路由<div class="sub header">Manage your preferences</div>
+        </div>
+    </h2>
+    <div class="ui grid">
+        <div class="four wide column">
+            <div class="ui vertical fluid tabular menu">
+                <router-link active-class="active"  class="item" to="/home">首页</router-link>
+                <router-link active-class="active"  class="item" to="/city">新闻</router-link>
+                <router-link active-class="active"  class="item" to="/town">视频</router-link>
+            </div>
+        </div>
+        <div class="twelve wide stretched column">
+            <div class="ui segment" id="segment"><router-view></router-view></div>
+        </div>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/vue-router.js"></script>
+<script src="../javascript/VueZ.js"></script>
+
+</body>
+</html>

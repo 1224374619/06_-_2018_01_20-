@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJ</title>
+    <link href="../semantic/semantic.min.css" rel="stylesheet" type="text/css">
+    <style>
+        #input-box{
+            width: 220px;
+            height: 30px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <div class="ui container">
+        <div class="ui divider">
+            <input id="input-box" type="text" size="21" maxlength="21" v-model="value"><br><br>
+            <button @click="typetoinput('1')" class="ui red basic button">1</button>
+            <button @click="typetoinput('2')" class="ui orange basic button">2</button>
+            <button @click="typetoinput('3')" class="ui yellow basic button">3</button>
+            <button class="ui yellow basic button">+</button><br><br>
+            <button @click="typetoinput('4')" class="ui red basic button">4</button>
+            <button @click="typetoinput('5')" class="ui orange basic button">5</button>
+            <button @click="typetoinput('6')" class="ui yellow basic button">6</button>
+            <button class="ui yellow basic button">-</button><br><br>
+            <button @click="typetoinput('7')" class="ui red basic button">7</button>
+            <button @click="typetoinput('8')" class="ui orange basic button">8</button>
+            <button @click="typetoinput('9')" class="ui yellow basic button">9</button>
+            <button class="ui yellow basic button">*</button><br><br>
+            <button class="ui red basic button">1</button>
+            <button @click="typetoinput('0')" class="ui orange basic button">0</button>
+            <button @click="operator('result')" class="ui yellow basic button">=</button>
+            <button class="ui yellow basic button">/</button><br><br>
+            <button class="ui yellow basic button">c</button>
+
+            <div class="ui divider"></div>
+            <counter></counter>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+<script src="../js/vuex.js"></script>
+<script src="../js/axios.js"></script>
+<script src="../javascript/VueJ.js"></script>
+</body>
+</html>
